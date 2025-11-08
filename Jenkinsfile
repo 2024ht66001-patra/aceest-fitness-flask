@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   parameters {
-    string(name: 'GIT_REPO', defaultValue: '', description: 'Git repository URL to clone. Leave empty to use Pipeline SCM.')
+    string(name: 'GIT_REPO', defaultValue: 'https://github.com/2024ht66001-patra/aceest-fitness-flask.git', description: 'Git repository URL to clone. Leave empty to use Pipeline SCM.')
     string(name: 'GIT_CRED_ID', defaultValue: '', description: 'Optional Jenkins credentialsId for accessing the Git repo')
   }
 
