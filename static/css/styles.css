@@ -1,0 +1,70 @@
+body {
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+h1, h2, h3 {
+    color: #343a40;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #007bff;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer {
+    background: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.summary {
+    margin-top: 20px;
+}
+
+.summary h2 {
+    margin-bottom: 10px;
+}
+
+.summary p {
+    font-size: 16px;
+}

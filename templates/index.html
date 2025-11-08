@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACEest Fitness & Gym Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏋️ ACEest Fitness & Gym Tracker</h1>
+        </header>
+        <main>
+            <form action="{{ url_for('add_workout') }}" method="POST">
+                <label for="category">Select Category:</label>
+                <select name="category" id="category">
+                    <option value="Workout">Workout</option>
+                    <option value="Warm-up">Warm-up</option>
+                    <option value="Cool-down">Cool-down</option>
+                </select>
+
+                <label for="exercise">Exercise:</label>
+                <input type="text" name="exercise" id="exercise" required>
+
+                <label for="duration">Duration (min):</label>
+                <input type="number" name="duration" id="duration" required>
+
+                <button type="submit">Add Session</button>
+            </form>
+            <a href="{{ url_for('view_summary') }}">View Summary</a>
+        </main>
+        <footer>
+            <p>&copy; 2023 ACEest Fitness Tracker</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

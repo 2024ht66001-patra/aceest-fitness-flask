@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Summary</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    {% include 'base.html' %}
+    <div class="container">
+        <h1>Session Summary</h1>
+        {% if workouts %}
+            {% for category, sessions in workouts.items() %}
+                <h2>{{ category }}:</h2>
+                <ul>
+                    {% for session in sessions %}
+                        <li>{{ session.exercise }} - {{ session.duration }} min</li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+            <h3>Total Time Spent: {{ total_time }} minutes</h3>
+            <p>
+                {% if total_time < 30 %}
+                    Good start! Keep moving 💪
+                {% elif total_time < 60 %}
+                    Nice effort! You're building consistency 🔥
+                {% else %}
+                    Excellent dedication! Keep up the great work 🏆
+                {% endif %}
+            </p>
+        {% else %}
+            <p>No sessions logged yet!</p>
+        {% endif %}
+        <a href="{{ url_for('index') }}">Back to Home</a>
+    </div>
+</body>
+</html>
